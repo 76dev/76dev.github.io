@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>76DEV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <style>
+  :root {
+    /* Primary theme color */
+    --primary-color: #263342;
+    /* Primary theme text color */
+    --primary-text-color: #fcfaf6;
+    /* Primary theme link color */
+    --primary-link-color: #ff1c76;
+    /* Secondary color: the background body color */
+    --secondary-color: #fcfaf6;
+    --secondary-text-color: #303030;
+    /* Highlight text color of table of content */
+    --toc-highlight-text-color: #ff1c76;
+  }
+</style>
+
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="&#x2F;juice.css">
+    
+    
+</head>
+
+<body>
+    
+
+    <header class="pos-absolute" style="background-color: transparent">
+        
+
+<a href="&#x2F;">
+    <div class="logo">
+        <img src="&#x2F;logo.svg" alt="logo">
+        Expect better.
+    </div>
+</a>
+
+<nav>
+    
+    <a class="nav-item subtitle-text" href="&#x2F;about&#x2F;">About Us</a>
+    
+    <a class="nav-item subtitle-text" href="&#x2F;contact&#x2F;">Contact Us</a>
+    
+    
+        
+        <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;github.com&#x2F;76dev&#x2F;76dev.github.io">GitHub</a>
+        
+    
+</nav>
+
+    </header>
+
+    <div class="hero">
+        
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<section class="text-center">
+  <h1 class="heading-text" style="font-size: 50px">
+    We can rapidly build up your tech stack or make it better.
+  </h1>
+  <h3 class="title-text">
+    <b>76DEV LLC</b> is a technology consulting company focused on cloud
+    engineering using automation and end-to-end security implementations.
+  </h3>
+</section>
+<img class="hero-image" style="width: 50%" src="&#x2F;logo.svg">
+
+<div
+  class="explore-more text"
+  onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})"
+>
+  Explore More ⇩
+</div>
+<style>
+  .hero section {
+    padding: 0 5rem;
+  }
+  @media screen and (max-width: 768px) {
+    .hero section {
+      padding: 0 2rem;
+    }
+
+    .hero-image {
+      display: none;
+    }
+  }
+</style>
+
+    </div>
+
+    
+
+    <main>
+        
+        
+        
+        
+        
+        <div class="toc">
+            <div class="toc-sticky">
+                
+                <div class="toc-item">
+                    <a class="subtext" href="/#76dev-llc">76DEV LLC</a>
+                </div>
+                
+                
+            </div>
+        </div>
+        
+        
+
+        <div class="content text">
+            
+            <div id="features" class="heading-text">Overview</div>
+            <h1 id="76dev-llc">76DEV LLC<a class="zola-anchor" href="#76dev-llc" aria-label="Anchor link for: 76dev-llc">🔗</a></h1>
+<p><strong>76DEV LLC</strong> is a technology consulting company focused on cloud engineering using automation and end-to-end security implementations.</p>
+<ul>
+<li>We are experts in building accredited systems of systems (GSS) in the cloud for federal government customers</li>
+<li>We focus on innovations in platform engineering and continuous integration to deliver in weeks not months or years</li>
+<li>We have a holistic understanding of security standards and validation and the experience necessary to deploy secure and compliant systems from day one</li>
+<li>We specialize in systems engineering, systems integration, systems operations, enterprise mobility security and engineering, and full-stack software development</li>
+<li>We fully support free software and opensource software but are not against using proprietary software if it can do the job better</li>
+<li>We really enjoy building and using kubernetes but we do the other stuff too</li>
+</ul>
+
+            
+        </div>
+
+        
+        
+    </main>
+
+    
+<footer>
+  <small class="subtext">
+    <a href="https://76dev.com">76dev.com</a> © 2021
+  </small>
+</footer>
+
+</body>
+<script>
+    function highlightNav(heading) {
+        let pathname = location.pathname;
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+        document.querySelector(".toc a[href$='" + pathname + "#" + heading + "']").classList.add("active");
+    }
+
+    let currentHeading = "";
+    window.onscroll = function () {
+        let h = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+        let elementArr = [];
+
+        h.forEach(item => {
+            if (item.id !== "") {
+                elementArr[item.id] = item.getBoundingClientRect().top;
+            }
+        });
+        elementArr.sort();
+        for (let key in elementArr) {
+            if (!elementArr.hasOwnProperty(key)) {
+                continue;
+            }
+            if (elementArr[key] > 0 && elementArr[key] < 300) {
+                if (currentHeading !== key) {
+                    highlightNav(key);
+                    currentHeading = key;
+                }
+                break;
+            }
+        }
+    }
+</script>
+
+</html>
