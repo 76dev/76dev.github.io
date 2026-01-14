@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us | 76DEV </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <style>
+  :root {
+    /* Primary theme color */
+    --primary-color: #263342;
+    /* Primary theme text color */
+    --primary-text-color: #fcfaf6;
+    /* Primary theme link color */
+    --primary-link-color: #ff1c76;
+    /* Secondary color: the background body color */
+    --secondary-color: #fcfaf6;
+    --secondary-text-color: #303030;
+    /* Highlight text color of table of content */
+    --toc-highlight-text-color: #ff1c76;
+  }
+</style>
+
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/juice.css">
+    
+    
+</head>
+
+<body>
+    
+<header class="box-shadow">
+    
+
+<a href="&#x2F;">
+    <div class="logo">
+        <img src="/logo.svg" alt="logo">
+        Expect better.
+    </div>
+</a>
+
+<nav>
+    
+    <a class="nav-item subtitle-text" href="&#x2F;contact&#x2F;">Contact Us</a>
+    
+    <a class="nav-item subtitle-text" href="&#x2F;about&#x2F;">About Us</a>
+    
+    
+        
+        <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;github.com&#x2F;76dev&#x2F;76dev.github.io">GitHub</a>
+        
+    
+</nav>
+
+</header>
+
+
+    <main>
+        
+        
+        
+        
+        
+        <div class="toc">
+            <div class="toc-sticky">
+                
+                <div class="toc-item">
+                    <a class="subtext" href="/contact/#we-d-love-to-hear-from-you">We’d love to hear from you</a>
+                </div>
+                
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="/contact/#send-us-an-email"><small>- Send us an email</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="/contact/#connect-on-slack"><small>- Connect on slack</small></a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        
+
+        <div class="content text">
+            
+<div class="heading-text">Contact 76DEV</div>
+<h1 id="we-d-love-to-hear-from-you">We’d love to hear from you<a class="zola-anchor" href="#we-d-love-to-hear-from-you" aria-label="Anchor link for: we-d-love-to-hear-from-you">🔗</a></h1>
+<blockquote>
+<p>Thank you for visiting us and allowing us to understand your technology needs. We are confident we have the know-how to shape a solution that addresses your unique challenges.</p>
+</blockquote>
+<h2 id="send-us-an-email">Send us an email<a class="zola-anchor" href="#send-us-an-email" aria-label="Anchor link for: send-us-an-email">🔗</a></h2>
+<p>We can be reached via email at <code>contact at 76dev.com</code></p>
+<h2 id="connect-on-slack">Connect on slack<a class="zola-anchor" href="#connect-on-slack" aria-label="Anchor link for: connect-on-slack">🔗</a></h2>
+<p>Join our slack workspace at <a href="https://76dev.slack.com">https://76dev.slack.com</a>.</p>
+
+
+        </div>
+
+        
+        
+    </main>
+
+    
+<footer>
+  <small class="subtext">
+    <a href="https://76dev.com">76dev.com</a> © 2026
+  </small>
+</footer>
+
+</body>
+<script>
+    function highlightNav(heading) {
+        let pathname = location.pathname;
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+        document.querySelector(".toc a[href$='" + pathname + "#" + heading + "']").classList.add("active");
+    }
+
+    let currentHeading = "";
+    window.onscroll = function () {
+        let h = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+        let elementArr = [];
+
+        h.forEach(item => {
+            if (item.id !== "") {
+                elementArr[item.id] = item.getBoundingClientRect().top;
+            }
+        });
+        elementArr.sort();
+        for (let key in elementArr) {
+            if (!elementArr.hasOwnProperty(key)) {
+                continue;
+            }
+            if (elementArr[key] > 0 && elementArr[key] < 300) {
+                if (currentHeading !== key) {
+                    highlightNav(key);
+                    currentHeading = key;
+                }
+                break;
+            }
+        }
+    }
+</script>
+
+</html>

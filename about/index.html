@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About Us | 76DEV </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <style>
+  :root {
+    /* Primary theme color */
+    --primary-color: #263342;
+    /* Primary theme text color */
+    --primary-text-color: #fcfaf6;
+    /* Primary theme link color */
+    --primary-link-color: #ff1c76;
+    /* Secondary color: the background body color */
+    --secondary-color: #fcfaf6;
+    --secondary-text-color: #303030;
+    /* Highlight text color of table of content */
+    --toc-highlight-text-color: #ff1c76;
+  }
+</style>
+
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/juice.css">
+    
+    
+</head>
+
+<body>
+    
+<header class="box-shadow">
+    
+
+<a href="&#x2F;">
+    <div class="logo">
+        <img src="/logo.svg" alt="logo">
+        Expect better.
+    </div>
+</a>
+
+<nav>
+    
+    <a class="nav-item subtitle-text" href="&#x2F;contact&#x2F;">Contact Us</a>
+    
+    <a class="nav-item subtitle-text" href="&#x2F;about&#x2F;">About Us</a>
+    
+    
+        
+        <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;github.com&#x2F;76dev&#x2F;76dev.github.io">GitHub</a>
+        
+    
+</nav>
+
+</header>
+
+
+    <main>
+        
+        
+        
+        
+        
+        <div class="toc">
+            <div class="toc-sticky">
+                
+                <div class="toc-item">
+                    <a class="subtext" href="/about/#76dev-llc">76DEV LLC</a>
+                </div>
+                
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="/about/#integrity"><small>- Integrity</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="/about/#privacy"><small>- Privacy</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="/about/#agency"><small>- Agency</small></a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        
+
+        <div class="content text">
+            
+<div class="heading-text">About 76DEV LLC</div>
+<blockquote>
+<h1 id="76dev-llc">76DEV LLC<a class="zola-anchor" href="#76dev-llc" aria-label="Anchor link for: 76dev-llc">🔗</a></h1>
+<p>Technology is an enabler. It can amplify weaknesses as well as strengths. 76DEV is built on the principles of <strong>Integrity, Privacy and Agency</strong>.</p>
+</blockquote>
+<h2 id="integrity">Integrity<a class="zola-anchor" href="#integrity" aria-label="Anchor link for: integrity">🔗</a></h2>
+<p><code>Cohesion</code> <code>Genuineness</code> <code>Consistency</code> <code>Lack of Corruption</code></p>
+<p>Go into the unknown and emerge on the other side true.</p>
+<h2 id="privacy">Privacy<a class="zola-anchor" href="#privacy" aria-label="Anchor link for: privacy">🔗</a></h2>
+<p><code>Confidential</code> <code>Undisclosed</code> <code>Privy</code> <code>Trusted</code></p>
+<p>Respect the privacy of people and handle their data with the utmost care. Only use private information as it was intended to be used. Only collect and retain information necessary to provide services that people require.</p>
+<h2 id="agency">Agency<a class="zola-anchor" href="#agency" aria-label="Anchor link for: agency">🔗</a></h2>
+<p><code>Self-determination</code> <code>Choice</code> <code>Make-its-own</code></p>
+<p>People have the final say. Individuals are accountable for the work they do and the life they lead. Therefore individuals must be provided the opportunity to exercise control over their thoughts and actions. Trust that the individuals’ talents, experiences, and wisdom will prevail. Leaders and fellows are there to provide counsel, so the individual at the helm can be empowered with many different perspectives.</p>
+
+
+        </div>
+
+        
+        
+    </main>
+
+    
+<footer>
+  <small class="subtext">
+    <a href="https://76dev.com">76dev.com</a> © 2026
+  </small>
+</footer>
+
+</body>
+<script>
+    function highlightNav(heading) {
+        let pathname = location.pathname;
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+        document.querySelector(".toc a[href$='" + pathname + "#" + heading + "']").classList.add("active");
+    }
+
+    let currentHeading = "";
+    window.onscroll = function () {
+        let h = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+        let elementArr = [];
+
+        h.forEach(item => {
+            if (item.id !== "") {
+                elementArr[item.id] = item.getBoundingClientRect().top;
+            }
+        });
+        elementArr.sort();
+        for (let key in elementArr) {
+            if (!elementArr.hasOwnProperty(key)) {
+                continue;
+            }
+            if (elementArr[key] > 0 && elementArr[key] < 300) {
+                if (currentHeading !== key) {
+                    highlightNav(key);
+                    currentHeading = key;
+                }
+                break;
+            }
+        }
+    }
+</script>
+
+</html>
