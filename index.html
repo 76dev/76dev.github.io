@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>76DEV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+<link rel="icon" href="https://www.76dev.com/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://www.76dev.com/logo.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.76dev.com/apple-touch-icon.png">
+
+    <style>
+  :root {
+    /* Primary theme color */
+    --primary-color: #263342;
+    /* Primary theme text color */
+    --primary-text-color: #fcfaf6;
+    /* Primary theme link color */
+    /* Accessible magenta (#d11062, 5.1:1 on cream) per brand/ACCESSIBILITY.md.
+       Raw Signal Magenta #ff1c76 is ~3.5:1 and fails WCAG AA / 508 as link text. */
+    --primary-link-color: #d11062;
+    /* Secondary color: the background body color */
+    --secondary-color: #fcfaf6;
+    --secondary-text-color: #303030;
+    /* Highlight text color of table of content */
+    --toc-highlight-text-color: #d11062;
+  }
+</style>
+
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https://www.76dev.com/juice.css">
+    
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.76dev.com/custom.css">
+
+</head>
+
+<body>
+    
+
+    <header class="pos-absolute" style="background-color: transparent">
+        
+
+<a href="https:&#x2F;&#x2F;www.76dev.com&#x2F;">
+    <div class="logo">
+        <img src="https://www.76dev.com/logo.svg" alt="logo">
+        Expect better.
+    </div>
+</a>
+
+<nav>
+    
+    <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;www.76dev.com&#x2F;about&#x2F;">About Us</a>
+    
+    <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;www.76dev.com&#x2F;products&#x2F;">Products</a>
+    
+    <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;www.76dev.com&#x2F;jobs&#x2F;">Jobs</a>
+    
+    <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;www.76dev.com&#x2F;contact&#x2F;">Contact Us</a>
+    
+    
+</nav>
+
+    </header>
+
+    <div class="hero">
+        
+<canvas class="hero-dotmatrix" aria-hidden="true"></canvas>
+<section class="text-center hero-content">
+  <span class="eyebrow">American-Owned Small Business · Washington DC Metro</span>
+  <h1 class="display">
+    From Prototype to Production, <span class="accent">Fast</span>
+  </h1>
+  <p class="lead">
+    <b>76DEV</b> builds secure applications and cloud platforms for missions that can't wait.
+  </p>
+  <div class="btn-group">
+    <a class="btn btn--ghost" href="#features"
+       onclick="event.preventDefault(); document.getElementById('features').scrollIntoView({behavior: 'smooth'})">
+      What we build
+    </a>
+    <a class="btn btn--accent" href="https://www.76dev.com/contact/">Get in touch</a>
+  </div>
+</section>
+<img class="hero-image" src="https://www.76dev.com/logo.svg">
+<style>
+  .hero {
+    position: relative;
+    background: radial-gradient(120% 120% at 50% 0%, #2a3848 0%, var(--primary-color) 62%);
+  }
+  /* The hero is now positioned, so keep the absolute header/nav painting above it */
+  header.pos-absolute { z-index: 5; }
+  /* Dot-matrix LED field: sits above the gradient, behind the content */
+  .hero-dotmatrix {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .hero section { padding: 0 5rem; }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 620px;
+  }
+  .hero-image { position: relative; z-index: 1; width: 42%; }
+  @media screen and (max-width: 768px) {
+    .hero section { padding: 0 2rem; }
+    .hero-image { display: none; }
+  }
+</style>
+<script defer src="https://www.76dev.com/hero-dotmatrix.js"></script>
+
+    </div>
+
+    
+
+    <main>
+        
+
+        <div class="content text">
+            
+<div class="landing">
+
+<section class="band band--cream band--center" id="features">
+
+<div class="band__inner">
+
+<p><span class="eyebrow">What we do</span></p>
+<h2 id="we-build-technology-that-ships">We Build Technology That Ships</h2>
+<p>People don’t wait for slow software. <strong>76DEV</strong> builds secure applications, automation systems, and cloud platforms that go from prototype to production in weeks, not years.</p>
+<div class="stats"><div class="stat"><span class="stat__num">18+</span><span class="stat__label">years on federal missions</span></div>
+<div class="stat"><span class="stat__num">High³</span><span class="stat__label">systems delivered with full ATO</span></div>
+<div class="stat"><span class="stat__num">Weeks</span><span class="stat__label">prototype to production, not years</span></div></div>
+
+</div>
+</section><section class="band band--navy band--center">
+
+<div class="band__inner">
+
+<h2 id="what-gets-built">What Gets Built</h2>
+<div class="cards"><div class="card"><h3 class="card__title">Cloud Infrastructure</h3>
+<p>Automated platforms built with Infrastructure as Code. Deploy secure, compliant environments in days instead of months.</p>
+</div>
+<div class="card"><h3 class="card__title">DevSecOps Automation</h3>
+<p>CI/CD pipelines and automated security controls that let teams ship faster while meeting federal compliance requirements.</p>
+</div>
+<div class="card"><h3 class="card__title">Kubernetes Platforms</h3>
+<p>Container orchestration that gives developers velocity without sacrificing security.</p>
+</div>
+<div class="card"><h3 class="card__title">Custom Software</h3>
+<p>Full-stack applications and API solutions built for federal security standards from day one.</p>
+</div></div>
+
+</div>
+</section><section class="band band--cream">
+
+<div class="band__inner">
+
+<h2 id="the-approach">The Approach</h2>
+<p><strong>76DEV</strong> builds working software, not PowerPoint architectures. With 18+ years delivering to federal government clients, the focus is on navigating federal requirements while keeping delivery timelines compressed.</p>
+<p>Everything that can be automated gets automated: Infrastructure as Code, automated testing, security scanning, and compliance checks. Less manual work means faster delivery and fewer errors.</p>
+<p>Technology pragmatism over ideology: extensive work with open source and Kubernetes, but using whatever solves the problem best. Security and compliance are built in from the start, backed by deep understanding of NIST controls and RMF processes.</p>
+<div class="btn-group">
+<a class="btn btn--primary" href="https:&#x2F;&#x2F;www.76dev.com&#x2F;products&#x2F;">See what we build</a>
+<a class="btn btn--accent" href="https:&#x2F;&#x2F;www.76dev.com&#x2F;contact&#x2F;">Get in touch</a>
+</div>
+
+</div>
+</section>
+
+</div>
+
+        </div>
+
+        
+        
+    </main>
+
+    
+<footer>
+  <small class="subtext">
+    <a href="https://76dev.com">76dev.com</a> © 2026
+  </small>
+</footer>
+
+</body>
+<script>
+    function highlightNav(heading) {
+        let pathname = location.pathname;
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+        document.querySelector(".toc a[href$='" + pathname + "#" + heading + "']").classList.add("active");
+    }
+
+    let currentHeading = "";
+    window.onscroll = function () {
+        let h = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+        let elementArr = [];
+
+        h.forEach(item => {
+            if (item.id !== "") {
+                elementArr[item.id] = item.getBoundingClientRect().top;
+            }
+        });
+        elementArr.sort();
+        for (let key in elementArr) {
+            if (!elementArr.hasOwnProperty(key)) {
+                continue;
+            }
+            if (elementArr[key] > 0 && elementArr[key] < 300) {
+                if (currentHeading !== key) {
+                    highlightNav(key);
+                    currentHeading = key;
+                }
+                break;
+            }
+        }
+    }
+</script>
+
+</html>

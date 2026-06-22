@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Products | 76DEV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+<link rel="icon" href="https://www.76dev.com/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://www.76dev.com/logo.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.76dev.com/apple-touch-icon.png">
+
+    <style>
+  :root {
+    /* Primary theme color */
+    --primary-color: #263342;
+    /* Primary theme text color */
+    --primary-text-color: #fcfaf6;
+    /* Primary theme link color */
+    /* Accessible magenta (#d11062, 5.1:1 on cream) per brand/ACCESSIBILITY.md.
+       Raw Signal Magenta #ff1c76 is ~3.5:1 and fails WCAG AA / 508 as link text. */
+    --primary-link-color: #d11062;
+    /* Secondary color: the background body color */
+    --secondary-color: #fcfaf6;
+    --secondary-text-color: #303030;
+    /* Highlight text color of table of content */
+    --toc-highlight-text-color: #d11062;
+  }
+</style>
+
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https://www.76dev.com/juice.css">
+    
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.76dev.com/custom.css">
+
+</head>
+
+<body>
+    
+
+<header class="box-shadow">
+    
+
+<a href="https:&#x2F;&#x2F;www.76dev.com&#x2F;">
+    <div class="logo">
+        <img src="https://www.76dev.com/logo.svg" alt="logo">
+        Expect better.
+    </div>
+</a>
+
+<nav>
+    
+    <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;www.76dev.com&#x2F;about&#x2F;">About Us</a>
+    
+    <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;www.76dev.com&#x2F;products&#x2F;">Products</a>
+    
+    <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;www.76dev.com&#x2F;jobs&#x2F;">Jobs</a>
+    
+    <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;www.76dev.com&#x2F;contact&#x2F;">Contact Us</a>
+    
+    
+</nav>
+
+</header>
+
+
+
+    <main>
+        
+
+        <div class="content text">
+            
+
+<div class="landing">
+
+<section class="band band--navy band--center">
+
+<div class="band__inner">
+
+<p><span class="eyebrow">Our Platform</span></p>
+<h2 id="smart-workspace">SMART Workspace</h2>
+<p class="lead">Browser-accessible Linux dev environments with kernel-level isolation, deployable on infrastructure you own.</p>
+<div class="video-embed">
+<iframe src="https://www.youtube-nocookie.com/embed/_z8Wooha34I" title="SMART Workspace demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<div class="btn-group">
+<a class="btn btn--accent" href="https:&#x2F;&#x2F;youtu.be&#x2F;_z8Wooha34I">Watch on YouTube</a>
+<a class="btn btn--ghost" href="https:&#x2F;&#x2F;www.76dev.com&#x2F;contact&#x2F;">Talk to us</a>
+</div>
+
+</div>
+</section><section class="band band--cream">
+
+<div class="band__inner">
+
+<p>Modern development means running untrusted code in trusted places. AI-generated scripts. Contractor commits. Customer datasets. Prototypes from a new hire’s first week. Standard container runtimes share the host kernel, so one bad syscall in a workspace can compromise the host.</p>
+<p><strong>SMART Workspace</strong> gives every workspace a kernel-level isolation boundary. It federates identity with whatever your organization already runs, records every session for audit, and runs entirely on your hardware.</p>
+<div class="stats"><div class="stat"><span class="stat__num">No meter</span><span class="stat__label">no per-seat or per-vCPU-hour fees</span></div>
+<div class="stat"><span class="stat__num">1 host</span><span class="stat__label">no Kubernetes to operate</span></div>
+<div class="stat"><span class="stat__num">100%</span><span class="stat__label">on hardware you own</span></div></div>
+
+</div>
+</section><section class="band band--navy">
+
+<div class="band__inner">
+
+<h2 id="real-isolation-not-namespaces">Real isolation, not namespaces</h2>
+<p>Every workspace runs inside <a href="https://gvisor.dev">gVisor</a>, the userspace kernel Google built for Cloud Run and App Engine. It is the same sandbox Anthropic uses to safely execute the code Claude generates, and the same one OpenAI runs Code Interpreter on. The boundary sits at the kernel, not at namespace separation alone.</p>
+<p>Take copy.fail (CVE-2026-31431), a Linux kernel privilege-escalation chain that turns an unprivileged user into root. Under a standard container runtime, that is a host compromise. Under gVisor, the syscalls the exploit relies on are not even exposed inside the workspace. It dead-ends at the sandbox.</p>
+
+
+</div>
+</section><section class="band band--cream">
+
+<div class="band__inner">
+
+<h2 id="your-hardware-your-data-your-identity">Your hardware. Your data. Your identity.</h2>
+<p>SMART Workspace runs on infrastructure you own. No code, no data, and no identity flows through a third party.</p>
+<div class="cards"><div class="card"><h3 class="card__title">OIDC federation</h3>
+<p>Works with the identity provider you already run. Authentik ships bundled and federates to Okta, ADFS, Active Directory, Google, GitHub, and any OIDC or SAML 2.0 provider.</p>
+</div>
+<div class="card"><h3 class="card__title">Air-gap deployable</h3>
+<p>nginx terminates TLS with certificates issued over DNS-01, so the host never needs a public IP or inbound connectivity.</p>
+</div>
+<div class="card"><h3 class="card__title">No external telemetry</h3>
+<p>The platform does not phone home. All state lives on the host.</p>
+</div></div>
+
+</div>
+</section><section class="band band--navy">
+
+<div class="band__inner">
+
+<h2 id="audit-ready-by-default">Audit-ready by default</h2>
+<div class="cards"><div class="card"><h3 class="card__title">Every session recorded</h3>
+<p>Byte-perfect transcripts of what was typed and what the shell printed, written to local disk. Recording survives reconnects, so a dropped connection never fragments the trail.</p>
+</div>
+<div class="card"><h3 class="card__title">Signed git audit trail</h3>
+<p>Each closed session is committed to a per-user repository signed by the host key, with a tamper-evidence ledger line in every commit.</p>
+</div>
+<div class="card"><h3 class="card__title">Privileged-action audit log</h3>
+<p>An append-only record of account, credential, and workspace lifecycle events, browsable from the admin console.</p>
+</div>
+<div class="card"><h3 class="card__title">Malware scanning at ingest</h3>
+<p>ClamAV scans every web upload and blocks plus audits infected files before they reach the shared folder.</p>
+</div></div>
+
+</div>
+</section><section class="band band--cream">
+
+<div class="band__inner">
+
+<h2 id="built-for-federal-missions">Built for federal missions</h2>
+<p>Helps you meet CMMC Level 1 and FISMA Low: SMART Workspace maps its features to NIST 800-53 controls, so your compliance lead starts from a documented baseline instead of a blank page. A readiness aid, pending assessor validation, not a certification.</p>
+<div class="cards"><div class="card"><h3 class="card__title">FIPS-mode crypto</h3>
+<p>A FIPS-mode Ubuntu base image runs OpenSSL and OpenSSH with the FIPS provider active inside every workspace, verified under gVisor.</p>
+</div>
+<div class="card"><h3 class="card__title">PIV &#x2F; CAC sign-in</h3>
+<p>Smart-card login at the edge with Federal Common Policy and DoD Root CA bundles, proven with a real government PIV card.</p>
+</div>
+<div class="card"><h3 class="card__title">Compliance evidence pack</h3>
+<p>Export a signed, OSCAL-based SSP bundle (control coverage plus live audit and session evidence) for your ISSO to drop into a System Security Plan.</p>
+</div>
+<div class="card"><h3 class="card__title">SIEM export</h3>
+<p>Stream the audit log and session-trail metadata to Splunk, ELK, or Sentinel, so your SOC watches the platform with its own tooling. Metadata only, never session content.</p>
+</div></div>
+
+</div>
+</section><section class="band band--navy">
+
+<div class="band__inner">
+
+<h2 id="usable-today">Usable today</h2>
+<ul>
+<li>Self-serve workspace provisioning, bounded by admin-set quotas</li>
+<li>A persistent browser shell that survives closing the tab, plus <code>ssh &lt;workspace&gt;.&lt;domain&gt;</code> with no port to remember and a scriptable CLI</li>
+<li>Self-service SSH key management and <code>~/startup.d</code> boot scripts for per-workspace setup</li>
+<li>Publish a workspace’s HTTP service at a stable subdomain, public or login-gated</li>
+<li>One-click sidecar services on a private per-workspace network: PostgreSQL, MySQL, Redis, and ActiveMQ Artemis</li>
+<li>Multi-distro base images (Ubuntu, Fedora, and Arch), plus a FIPS-mode Ubuntu image</li>
+<li>Self-hosted DNS and a single-file CLI for macOS, Linux, and Windows</li>
+<li>Self-service encrypted backups to storage you control</li>
+</ul>
+<h2 id="who-it-is-for">Who it is for</h2>
+<p>Enterprise dev teams, regulated industries, and federal missions that need to give developers real Linux while keeping the blast radius contained. If your people run other people’s code, and shipping it through a SaaS workspace is not an option, SMART Workspace is built for you.</p>
+
+
+</div>
+</section><section class="band band--cream band--center">
+
+<div class="band__inner">
+
+<h2 id="see-it-work">See it work</h2>
+<p>Watch the demo, or reach us at <code>contact at 76dev.com</code> to talk through a deployment.</p>
+<div class="video-embed">
+<iframe src="https://www.youtube-nocookie.com/embed/_z8Wooha34I" title="SMART Workspace demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<div class="btn-group">
+<a class="btn btn--ghost" href="https:&#x2F;&#x2F;youtu.be&#x2F;_z8Wooha34I">Watch on YouTube</a>
+<a class="btn btn--primary" href="https:&#x2F;&#x2F;www.76dev.com&#x2F;contact&#x2F;">Get in touch</a>
+</div>
+
+</div>
+</section>
+
+</div>
+
+
+        </div>
+
+        
+        
+    </main>
+
+    
+<footer>
+  <small class="subtext">
+    <a href="https://76dev.com">76dev.com</a> © 2026
+  </small>
+</footer>
+
+</body>
+<script>
+    function highlightNav(heading) {
+        let pathname = location.pathname;
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+        document.querySelector(".toc a[href$='" + pathname + "#" + heading + "']").classList.add("active");
+    }
+
+    let currentHeading = "";
+    window.onscroll = function () {
+        let h = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+        let elementArr = [];
+
+        h.forEach(item => {
+            if (item.id !== "") {
+                elementArr[item.id] = item.getBoundingClientRect().top;
+            }
+        });
+        elementArr.sort();
+        for (let key in elementArr) {
+            if (!elementArr.hasOwnProperty(key)) {
+                continue;
+            }
+            if (elementArr[key] > 0 && elementArr[key] < 300) {
+                if (currentHeading !== key) {
+                    highlightNav(key);
+                    currentHeading = key;
+                }
+                break;
+            }
+        }
+    }
+</script>
+
+</html>

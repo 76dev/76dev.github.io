@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us | 76DEV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+<link rel="icon" href="https://www.76dev.com/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://www.76dev.com/logo.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.76dev.com/apple-touch-icon.png">
+
+    <style>
+  :root {
+    /* Primary theme color */
+    --primary-color: #263342;
+    /* Primary theme text color */
+    --primary-text-color: #fcfaf6;
+    /* Primary theme link color */
+    /* Accessible magenta (#d11062, 5.1:1 on cream) per brand/ACCESSIBILITY.md.
+       Raw Signal Magenta #ff1c76 is ~3.5:1 and fails WCAG AA / 508 as link text. */
+    --primary-link-color: #d11062;
+    /* Secondary color: the background body color */
+    --secondary-color: #fcfaf6;
+    --secondary-text-color: #303030;
+    /* Highlight text color of table of content */
+    --toc-highlight-text-color: #d11062;
+  }
+</style>
+
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https://www.76dev.com/juice.css">
+    
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.76dev.com/custom.css">
+
+</head>
+
+<body>
+    
+
+<header class="box-shadow">
+    
+
+<a href="https:&#x2F;&#x2F;www.76dev.com&#x2F;">
+    <div class="logo">
+        <img src="https://www.76dev.com/logo.svg" alt="logo">
+        Expect better.
+    </div>
+</a>
+
+<nav>
+    
+    <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;www.76dev.com&#x2F;about&#x2F;">About Us</a>
+    
+    <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;www.76dev.com&#x2F;products&#x2F;">Products</a>
+    
+    <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;www.76dev.com&#x2F;jobs&#x2F;">Jobs</a>
+    
+    <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;www.76dev.com&#x2F;contact&#x2F;">Contact Us</a>
+    
+    
+</nav>
+
+</header>
+
+
+
+    <main>
+        
+
+        <div class="content text">
+            
+
+<div class="landing">
+
+<section class="band band--navy band--center">
+
+<div class="band__inner">
+
+<p><span class="eyebrow">Contact</span></p>
+<h2 id="let-s-talk">Let’s talk</h2>
+<p class="lead">How do we use today's technologies to make tomorrow better? Tell us about your mission. We're confident we have the know-how to shape a solution for your unique challenges.</p>
+<div class="btn-group">
+<a class="btn btn--accent" href="https:&#x2F;&#x2F;76dev.slack.com">Join our Slack</a>
+<a class="btn btn--ghost" href="https:&#x2F;&#x2F;www.76dev.com&#x2F;products&#x2F;">See what we build</a>
+</div>
+
+</div>
+</section><section class="band band--cream band--center">
+
+<div class="band__inner">
+
+<h2 id="reach-us">Reach us</h2>
+<div class="cards"><div class="card"><h3 class="card__title">Email</h3>
+<p>Drop us a line at <code>contact at 76dev.com</code>. We read every message and reply fast.</p>
+</div>
+<div class="card"><h3 class="card__title">Slack</h3>
+<p>Join our workspace at <a href="https://76dev.slack.com">76dev.slack.com</a> to chat with the team directly.</p>
+</div>
+<div class="card"><h3 class="card__title">Where we are</h3>
+<p>An American-owned small business in the Washington, DC metro area, built for federal missions.</p>
+</div></div>
+
+</div>
+</section>
+
+</div>
+
+
+        </div>
+
+        
+        
+    </main>
+
+    
+<footer>
+  <small class="subtext">
+    <a href="https://76dev.com">76dev.com</a> © 2026
+  </small>
+</footer>
+
+</body>
+<script>
+    function highlightNav(heading) {
+        let pathname = location.pathname;
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+        document.querySelector(".toc a[href$='" + pathname + "#" + heading + "']").classList.add("active");
+    }
+
+    let currentHeading = "";
+    window.onscroll = function () {
+        let h = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+        let elementArr = [];
+
+        h.forEach(item => {
+            if (item.id !== "") {
+                elementArr[item.id] = item.getBoundingClientRect().top;
+            }
+        });
+        elementArr.sort();
+        for (let key in elementArr) {
+            if (!elementArr.hasOwnProperty(key)) {
+                continue;
+            }
+            if (elementArr[key] > 0 && elementArr[key] < 300) {
+                if (currentHeading !== key) {
+                    highlightNav(key);
+                    currentHeading = key;
+                }
+                break;
+            }
+        }
+    }
+</script>
+
+</html>
