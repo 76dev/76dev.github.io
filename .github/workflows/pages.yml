@@ -1,0 +1,40 @@
+# Publish this repo's static files to GitHub Pages from the self-hosted runner.
+#
+# Pages build_type is "workflow" (set via the API), so GitHub's managed Jekyll
+# build is out of the loop entirely: no managed runners, no Jekyll pass. The
+# content is pushed here pre-built by 76dev/76dev-zola CI; this workflow only
+# packages and deploys it.
+#
+# NOTE: the 76dev-zola deploy step preserves .github/ when it syncs content —
+# do not reintroduce a force-push orphan deploy or this file disappears.
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, smart-workspace]
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - name: deploy to pages
+        id: deployment
+        uses: actions/deploy-pages@v4
